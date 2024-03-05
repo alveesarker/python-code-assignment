@@ -1,56 +1,56 @@
-# Prime Number and composite number
-# number = int(input('Enter the number: '))
-# if number < 2:
-#     print(f'{number} is not a prime number.')
-# else:
-#     for i in range(2, int(number ** .5)+1):
-#         if number % i == 0:
-#             print(f'{number} is a composite number.')
-#             break
-#     else:
-#         print(f'{number} is a prime number.')
+#Prime Number and composite number
+number = int(input('Enter the number: '))
+if number < 2:
+    print(f'{number} is not a prime number.')
+else:
+    for i in range(2, int(number ** .5)+1):
+        if number % i == 0:
+            print(f'{number} is a composite number.')
+            break
+    else:
+        print(f'{number} is a prime number.')
 
-# Quotient and Remainder:
-# n1 = int(input('Dividend: '))
-# n2 = int(input('Divisor: '))
-# quotient = n1 // n2
-# remainder = n1 % n2
-# print(f'Quotient is {quotient} and reminder is {remainder}')
-
-
-# # Prime number in a particular range:
-# number = int(input('Enter the number: '))
-# print(2)
-# for i in range(3, number+1):
-#     for j in range(2, int(i ** .5) + 1):
-#         if i % j == 0:
-#             break
-#     else:
-#         print(i)
+Quotient and Remainder:
+n1 = int(input('Dividend: '))
+n2 = int(input('Divisor: '))
+quotient = n1 // n2
+remainder = n1 % n2
+print(f'Quotient is {quotient} and reminder is {remainder}')
 
 
-# prime factors
-# def prime_factors(n):
-#     factors = []
-#     while n % 2 == 0:
-#         factors.append(2)
-#         n //= 2
-#
-#     for i in range(3, int(n ** .5) + 1, 2):
-#         while n % i == 0:
-#             factors.append(i)
-#             n //= i
-#
-#     if n > 2:
-#         factors.append(n)
-#     return factors
-#
-#
-# number = int(input())
-# print(prime_factors(number))
-#
+#Prime number in a particular range:
+number = int(input('Enter the number: '))
+print(2)
+for i in range(3, number+1):
+    for j in range(2, int(i ** .5) + 1):
+        if i % j == 0:
+            break
+    else:
+        print(i)
 
-# gcd & lcm & a.b = gcd(a,b).lcm(a.b
+
+#prime factors
+def prime_factors(n):
+    factors = []
+    while n % 2 == 0:
+        factors.append(2)
+        n //= 2
+
+    for i in range(3, int(n ** .5) + 1, 2):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+
+    if n > 2:
+        factors.append(n)
+    return factors
+
+
+number = int(input())
+print(prime_factors(number))
+
+
+#gcd & lcm & a.b = gcd(a,b).lcm(a.b
 a = int(input("a: "))
 b = int(input("b: "))
 
@@ -104,22 +104,22 @@ print(f"({a} X {b}) = {a * b}")
 print(f"Proved ({a} X {b}) = ({gcd} X {lcm})")
 
 
-# Goldbach conjecture
-# number = int(input('Enter the number: '))
-#
-# prime_number_list = [2]
-# for i in range(3, number+1):
-#     for j in range(2, int(i ** .5) + 1):
-#         if i % j == 0:
-#             break
-#     else:
-#         prime_number_list.append(i)
-#
-# for i in prime_number_list:
-#     if i <= (number/2):
-#         number_check = number - i
-#         if number_check in prime_number_list:
-#             print(f'{number} = {i} + {number_check}')
-#         else:
-#             continue
+#Goldbach conjecture
+number = int(input('Enter the number: '))
+
+prime_number_list = [2]
+for i in range(3, number+1):
+    for j in range(2, int(i ** .5) + 1):
+        if i % j == 0:
+            break
+    else:
+        prime_number_list.append(i)
+
+for i in prime_number_list:
+    if i <= (number/2):
+        number_check = number - i
+        if number_check in prime_number_list:
+            print(f'{number} = {i} + {number_check}')
+        else:
+            continue
 
